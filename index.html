@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="css/travel.css">
+
+
+</head>
+<body>
+    
+
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo">
+        <img src="images/TARANA.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">members</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+
+
+
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="Enter your email">
+        <input type="password" class="box" placeholder="Enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="register.html">register now</a></p>
+    </form>
+
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>Beyond the Maps into your heart</p>
+        <a href="#gallery" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/manila.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/thailand2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-1.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+
+<!-- book section starts  -->
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/book-img.svg" alt="">
+        </div>
+        <form action="">
+            <div class="inputBox" id="package1">
+                <h3>package Name</h3>
+            
+                <select>
+                    <option value="">Select...</option>
+                    <option value="Macau And Hong Kong">Macau And Hong Kong</option>
+                    <option value="Dumaguete And Siqujior">Dumaguete And Siqujior</option>
+                    <option value="sydney">Sydney</option>
+                    <option value="paris">Paris</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="egypt">Egypt</option>
+                </select>
+            </div>
+            <div class="inputBox" id="address1">
+                <h3>address</h3>
+                <input type="text" placeholder="Place name">
+            </div>
+            <div class="inputBox" id="guest1">
+                <h3>how many</h3>
+                <input type="number" placeholder="Number of guests">
+            </div>
+            <div class="inputBox" id="arrival1">
+                <h3>arrivals</h3>
+                <input type="date">
+            </div>
+            <div class="inputBox" id="departure1">
+                <h3>leaving</h3>
+                <input type="date">
+            </div>
+            <input type="submit" class="btn" id="book-now" value="book now">
+        </form>
+    </div>
+</section>
+<!-- book section ends -->
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the "Book Now" button element by the updated ID
+        var bookNowBtn = document.getElementById("book-now");
+
+        // Add a click event listener to the button
+        bookNowBtn.addEventListener("click", function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            var package1 = document.getElementById("package1").querySelector('select').value;
+            var address1 = document.getElementById("address1").querySelector('input').value;
+            var guest1 = document.getElementById("guest1").querySelector('input').value;
+            var arrival1 = document.getElementById("arrival1").querySelector('input').value;
+            var departure1 = document.getElementById("departure1").querySelector('input').value;
+
+            // Show an alert when the button is clicked
+            alert("YOU ARE ALREADY BOOK\nBOOK DESCRIPTION\nPACKAGE: " + package1 + "\nHOME ADDRESS: " + address1 + "\nNUMBER OF GUEST: " + guest1 + "\nDAY OF ARRIVAL: " + arrival1 + "\nDAY OF DEPARTURE: " + departure1);
+        });
+    });
+</script>
+
+
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/ngong.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Macau and Hong Kong </h3>
+                <p><b>5 Days 4 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (SIC TRASNPORTATION) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $450.00 <span>$600.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/siq.jfif" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> dumaguete and siqujior</h3>
+                <p><b>5 Days 4 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (VAN RENTAL W/DRIVER) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE with Snorkeling Equipments</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price"> $300.00 <span>$450.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
+                <p><b>4 Days 3 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (SIC TRASNPORTATION) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $800.00 <span>$1000.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+                <p><b>4 Days 3 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (SIC TRASNPORTATION) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $1000.00 <span>$1200.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
+                <p><b>4 Days 3 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (SIC TRASNPORTATION) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $900.00 <span>$1000.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> egypt </h3>
+                <p><b>4 Days 3 Nights</p></b>
+                <p><b>INCLUSIONS:</b></p>
+                <p>AIRFARE (ROUNDTRIP)
+                    ACCOMMODATION WITH BFAST
+                    TRASNPORTATION (SIC TRASNPORTATION) 
+                      LUNCH AND DINNER MEALS
+                    ENTRANCE FEES
+                    TOUR GUIDE!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $750.00 <span>$850.00</span> </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- packages section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safty guide</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p></p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/bora.jpg" alt="">
+            <div class="content">
+                <h3>BORACAY</h3>
+                <p>Boracay, a small but iconic island in the Philippines, is synonymous with tropical perfection. Its powdery white sands, crystal-clear waters beach destination.</p>
+                <a href="https://en.wikipedia.org/wiki/Boracay" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/palawan.jpg" alt="">
+            <div class="content">
+                <h3>EL NIDO, PALAWAN</h3>
+                <p>El Nido, located in Palawan, Philippines, is a breathtaking destination known for its dramatic limestone formations, crystal-clear waters, and hidden lagoons.</p>
+                <a href="https://en.wikipedia.org/wiki/El_Nido,_Palawan" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/cebu.jpg" alt="">
+            <div class="content">
+                <h3>MACTAN SHRINE, CEBU</h3>
+                <p>Cebu City, often referred to as the "Queen City of the South,". Offering travelers a taste of Filipino culture, from the historic sites of Magellan.</p>
+                <a href="https://en.wikipedia.org/wiki/Mactan_Shrine" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/bohol.jpg" alt="">
+            <div class="content">
+                <h3>PANGLAO, BOHOL</h3>
+                <p>Panglao, a pristine island in Bohol, Philippines, is a tropical haven known for its white sandy beaches. It's the perfect destination for beach.</p>
+                <a href="https://en.wikipedia.org/wiki/Panglao_Island" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/siargao.jpg" alt="">
+            <div class="content">
+                <h3>SIARGAO ISLAND</h3>
+                <p>Siargao, an island in the Philippines, is celebrated for its world-class surf breaks, including the famous Cloud 9. Siargao offers enchanting lagoons.</p>
+                <a href="https://en.wikipedia.org/wiki/Siargao" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/vigan.jpg" alt="">
+            <div class="content">
+                <h3>VIGAN CITY</h3>
+                <p>Vigan City, a UNESCO World Heritage site, is a living testament to the Philippines' rich colonial history. Its well-preserved Spanish colonial-era architecture.</p>
+                <a href="https://en.wikipedia.org/wiki/Vigan" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/baguio.jpg" alt="">
+            <div class="content">
+                <h3>BAGUIO CITY</h3>
+                <p>Nestled in the Cordillera Central mountain range, Baguio City, often dubbed the "Summer Capital of the Philippines," offers a refreshing escape from the tropical heat.</p>
+                <a href="https://en.wikipedia.org/wiki/Baguio" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/taal.jpg" alt="">
+            <div class="content">
+                <h3>TAAL LAKE</h3>
+                <p>Taal Lake, nestled in the Philippines, is a geological wonder and a sight to behold. Its defining feature is the Taal Volcano, a volcano within a volcano.</p>
+                <a href="https://en.wikipedia.org/wiki/Taal_Lake" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/aliwagwag.jpg" alt="">
+            <div class="content">
+                <h3>ALIWAGWAG FALLS</h3>
+                <p>Aliwagwag Falls, situated in the lush region of Davao Oriental in the Philippines, is a mesmerizing natural masterpiece.</p>
+                <a href="https://en.wikipedia.org/wiki/Aliwagwag_Protected_Landscape" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>m</span>
+        <span>e</span>
+        <span>m</span>
+        <span>b</span>
+        <span>e</span>
+        <span>r</span>
+        <span>s</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/ph.jpg" alt="">
+                    <h3>RHEG REGAYA</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/4895.jpg" alt="">
+                    <h3>CHRIS ROSALES</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/chrollo.jpg" alt="">
+                    <h3>CHROLLO LUCILFER</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/feitan.jpg" alt="">
+                    <h3>FEITAN PORTOR</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+             <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/saitama.jpg" alt="">
+                    <h3>SAITAMA</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/ry.jpeg" alt="">
+                    <h3>RYAN TEODOSIO</h3>
+                    <p></p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/contact-img.svg" alt="">
+        </div>
+
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email id">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/air.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pacific.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2go.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/IATA.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/DOT.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/TOA.png" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Founded in 2019 by the visionary travel and adventurer. At Tarana Travel,  we crafts memorable journeys that go beyond just visiting places. We believe travel should expand your horizons, connect you with different cultures, and create lasting bonds.</p>
+        </div>
+        <div class="box">
+            <h3>branch locations</h3>
+            <a href="#">india</a>
+            <a href="#">USA</a>
+            <a href="#">japan</a>
+            <a href="#">france</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#book">book</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">reviews</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/RhegRegaya">facebook</a>
+            <a href="https://www.instagram.com/taranatravel.agency/">instagram</a>
+            <a href="#">twitter</a>
+            <a href="https://www.linkedin.com/in/regaya-john-rheg-l-6161a728a/">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> all rights reserved! </h1>
+
+</section>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/travel.Js"></script>
+
+</body>
+</html>
